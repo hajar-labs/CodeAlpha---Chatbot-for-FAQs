@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SmartHelp — Python NLP Chatbot</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<header>
+  <div class="logo">🤖</div>
+  <div class="header-info">
+    <h1>SmartHelp</h1>
+    <p><span class="dot"></span> Python NLP Backend Active</p>
+  </div>
+  <div class="header-right">
+    <span class="badge python">🐍 Python</span>
+    <span class="badge sklearn">scikit-learn</span>
+    <span class="badge">TF-IDF · Cosine</span>
+  </div>
+</header>
+
+<main>
+  <aside class="sidebar">
+    <div class="sidebar-header">📚 FAQ Topics</div>
+    <div class="sidebar-scroll" id="sidebar-faqs"></div>
+  </aside>
+
+  <div class="chat-panel">
+    <div id="messages">
+      <div class="msg-wrap bot" style="justify-content:flex-start;">
+        <div class="avatar">🤖</div>
+        <div class="welcome">
+          <h2>Hi there! 👋</h2>
+          <p>I'm powered by a <strong>Python NLP backend</strong> using scikit-learn's TF-IDF vectorizer and cosine similarity. Ask any question and I'll find the best matching answer — and show you exactly how the NLP pipeline processed it.</p>
+          <div class="pills">
+            <span class="pill py">Tokenization</span>
+            <span class="pill py">Stop-word Removal</span>
+            <span class="pill py">Stemming</span>
+            <span class="pill sk">TF-IDF (sklearn)</span>
+            <span class="pill sk">Cosine Similarity</span>
+            <span class="pill nlp">Bigram Support</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="input-zone">
+      <div class="input-row">
+        <textarea id="qinput" placeholder="Ask me anything… e.g. How do I reset my password?" rows="1"></textarea>
+        <button id="sendbtn" title="Send">➤</button>
+      </div>
+      <div class="hint">Press <kbd>Enter</kbd> to send · <kbd>Shift+Enter</kbd> for new line</div>
+    </div>
+  </div>
+</main>
+
+<script src="/static/chat.js"></script>
+</body>
+</html>
